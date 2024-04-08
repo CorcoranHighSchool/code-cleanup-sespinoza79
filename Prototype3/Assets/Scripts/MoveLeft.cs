@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     // Movement Speed
@@ -10,10 +7,12 @@ public class MoveLeft : MonoBehaviour
     private PlayerController playerControllerScript;
     // Left bounds
     private float leftBound = -15.0f;
+    private const string player = "Player";
+    private const string obstacle = "Obstacle";
     // Start is called before the first frame update
     void Start()
     {
-        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerControllerScript = GameObject.Find(Player).GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
